@@ -1,0 +1,78 @@
+.hero {
+  background-image: url("../../assets/bank-tree.jpeg");
+  height: 420px;
+  background-position: 0 -200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  width: 300px;
+  background: white;
+  padding: 2rem;
+  text-align: left;
+  top: 100px;
+  left: 73%;
+}
+
+.hero-content .subtitle {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.hero-content .text {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+    background-position: 0 -100px;
+  }
+
+  .hero-content {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    width: 100%;
+    padding: 1rem;
+    top: 20px;
+    text-align: center;
+  }
+
+  .hero-content .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-content .text {
+    font-size: 1rem;
+  }
+  .hero {
+    height: 300px;
+    background-position: 0 -100px;
+  }
+}

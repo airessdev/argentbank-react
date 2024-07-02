@@ -1,0 +1,71 @@
+.edit-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.edit-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.input-wrapper-user-edit {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-wrapper-user-edit label {
+  font-weight: bold;
+}
+
+.input-wrapper-user-edit input {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.edit-wrapper label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-wrapper input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-wrapper input[disabled] {
+  background-color: #f9f9f9;
+  color: #999;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.edit-content-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #4caf50;
+  color: white;
+}

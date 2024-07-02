@@ -1,0 +1,22 @@
+.user-greetings {
+  padding: 20px;
+  color: #fff;
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-button {
+  display: block;
+  width: 50%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  outline: none;
+}
