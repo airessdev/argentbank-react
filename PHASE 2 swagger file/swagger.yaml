@@ -74,6 +74,8 @@ paths:
             $ref: '#/definitions/ApiResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Token not provided or invalid
         '500':
           description: Internal Server Error
     put:
@@ -99,6 +101,8 @@ paths:
             $ref: '#/definitions/ApiResponse'
         '400':
           description: Invalid Fields
+        '401':
+          description: Token not provided or invalid
         '500':
           description: Internal Server Error
   /accounts/{accountId}/transactions:
@@ -107,15 +111,13 @@ paths:
         - Bearer: []
       tags:
         - Transactions Management
-      summary: Retrieves all transactions for the current month, grouped by account
+      summary: Retrieve Transactions for an Account
+      description: API for retrieving all transactions for the specified account within the current month.
       parameters:
         - name: accountId
           in: path
           required: true
           type: string
-        
-        
-          
       produces:
         - application/json
       responses:
@@ -124,10 +126,11 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Transaction'
-        
+              $ref: '#/definitions/AccountTransaction'
         '400':
           description: Account not found
+        '401':
+          description: Token not provided or invalid
         '500':
           description: Internal server error
   /transactions/{transactionId}:
@@ -149,8 +152,10 @@ paths:
           description: Successfully retrieved the transaction details
           schema:
             $ref: '#/definitions/Transaction'
-        '404':
+        '400':
           description: Transaction not found
+        '401':
+          description: Token not provided or invalid
         '500':
           description: Internal server error
     put:
@@ -177,12 +182,12 @@ paths:
           description: Successfully modified the transaction
         '400':
           description: Invalid request data
+        '401':
+          description: Token not provided or invalid
         '404':
           description: Transaction not found
         '500':
           description: Internal server error
-   
-
 securityDefinitions:
   Bearer:
     type: apiKey
@@ -261,15 +266,19 @@ definitions:
         type: string
       note:
         type: string
+  AccountTransaction:
+    type: object
+    properties:
+      id:
+        type: string
+      accountId:
+        type: string
+      description:
+        type: string
   TransactionUpdate:
     type: object
     properties:
-      
       description:
-     
+        type: string
       category:
         type: string
-      note:
-        type: string
-      
-
