@@ -8,7 +8,9 @@ import './userEditForm.css';
 function UserEditForm({ setEditToggle }) {
     const dispatch = useDispatch();
     const token = useSelector(state => state.auth.token);
-    const user = useSelector(state => state.auth.user);
+    //const user = useSelector(state => state.auth.user);
+   // bad selector
+    const user = useSelector(state => state.user);
     
 
     const [userNames, setUserNames] = useState({
