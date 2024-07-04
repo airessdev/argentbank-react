@@ -255,6 +255,9 @@ definitions:
       amount:
         type: number
         format: float
+      balance:
+        type: number
+        format: float
       description:
         type: string
       date:
@@ -273,8 +276,17 @@ definitions:
         type: string
       accountId:
         type: string
+      date:
+        type: string
+        format: date
       description:
         type: string
+      amount:
+        type: number
+        format: float
+      balance:
+        type: number
+        format: float
   TransactionUpdate:
     type: object
     properties:
